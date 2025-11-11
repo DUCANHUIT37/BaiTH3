@@ -1,0 +1,108 @@
+﻿<Window x:Class="CinemaTicketApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BÁN VÉ RẠP CHIẾU BÓNG" Height="450" Width="450"
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#FF8C00" Padding="10" Margin="10,10,10,0">
+            <TextBlock Text="MÀN ẢNH" FontSize="28" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Foreground="White"/>
+        </Border>
+
+        <Border Grid.Row="1" BorderBrush="#CCCCCC" BorderThickness="1" 
+                Margin="10,15,10,10" Padding="15">
+            <Grid x:Name="SeatGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="Seat1" Grid.Row="0" Grid.Column="0" Content="1" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="C"/>
+                <Button x:Name="Seat2" Grid.Row="0" Grid.Column="1" Content="2" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="C"/>
+                <Button x:Name="Seat3" Grid.Row="0" Grid.Column="2" Content="3" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="C"/>
+                <Button x:Name="Seat4" Grid.Row="0" Grid.Column="3" Content="4" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="C"/>
+                <Button x:Name="Seat5" Grid.Row="0" Grid.Column="4" Content="5" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="C"/>
+
+                <Button x:Name="Seat6" Grid.Row="1" Grid.Column="0" Content="6" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="B"/>
+                <Button x:Name="Seat7" Grid.Row="1" Grid.Column="1" Content="7" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="B"/>
+                <Button x:Name="Seat8" Grid.Row="1" Grid.Column="2" Content="8" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="B"/>
+                <Button x:Name="Seat9" Grid.Row="1" Grid.Column="3" Content="9" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="B"/>
+                <Button x:Name="Seat10" Grid.Row="1" Grid.Column="4" Content="10" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="B"/>
+
+                <Button x:Name="Seat11" Grid.Row="2" Grid.Column="0" Content="11" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="A"/>
+                <Button x:Name="Seat12" Grid.Row="2" Grid.Column="1" Content="12" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="A"/>
+                <Button x:Name="Seat13" Grid.Row="2" Grid.Column="2" Content="13" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="A"/>
+                <Button x:Name="Seat14" Grid.Row="2" Grid.Column="3" Content="14" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="A"/>
+                <Button x:Name="Seat15" Grid.Row="2" Grid.Column="4" Content="15" 
+                        Margin="3" Height="50" FontSize="18" FontWeight="Bold"
+                        Background="White" Click="Seat_Click" Tag="A"/>
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="25,10,25,10">
+            <TextBlock Text="Thành Tiền:" FontSize="16" FontWeight="Bold" 
+                       VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBox x:Name="TotalAmountTextBox" Width="250" Height="30" 
+                     FontSize="16" IsReadOnly="True" Text="0"
+                     VerticalContentAlignment="Center" Background="White"
+                     BorderBrush="#CCCCCC" BorderThickness="1"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" Margin="0,10,0,15">
+            <Button x:Name="ChooseButton" Content="Chọn" Width="100" Height="35"
+                    FontSize="14" Margin="5" Click="Choose_Click"
+                    Background="#E0E0E0"/>
+            <Button x:Name="CancelButton" Content="Hủy bỏ" Width="100" Height="35"
+                    FontSize="14" Margin="5" Click="Cancel_Click"
+                    Background="#E0E0E0"/>
+            <Button x:Name="ResultButton" Content="Kết thúc" Width="100" Height="35"
+                    FontSize="14" Margin="5" Click="Result_Click"
+                    Background="#B0E0E6"/>
+        </StackPanel>
+    </Grid>
+</Window>

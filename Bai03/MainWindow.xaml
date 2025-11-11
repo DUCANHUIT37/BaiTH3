@@ -1,0 +1,15 @@
+﻿<Window x:Class="Bai3_ChangeColor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bài 3: Change Color" Height="450" Width="600">
+    <Grid x:Name="colorGrid" Background="Beige">
+        <Button x:Name="changeColorButton"
+                Content="Change Color"
+                Width="120"
+                Height="35"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="14"
+                Click="ChangeColorButton_Click"/>
+    </Grid>
+</Window>

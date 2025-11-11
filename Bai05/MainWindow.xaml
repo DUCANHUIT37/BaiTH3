@@ -1,0 +1,45 @@
+﻿<Window x:Class="Lab02Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lab02-Example" Height="250" Width="400"
+        ResizeMode="CanMinimize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Number 1:" 
+               VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtNumber1" Grid.Row="0" Grid.Column="1" 
+                 Height="25" Margin="5" VerticalContentAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Number 2:" 
+               VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtNumber2" Grid.Row="1" Grid.Column="1" 
+                 Height="25" Margin="5" VerticalContentAlignment="Center"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+                    Orientation="Horizontal" HorizontalAlignment="Center" 
+                    Margin="0,15">
+            <Button x:Name="btnAdd" Content="+" Width="50" Height="30" 
+                    Margin="5" Click="BtnAdd_Click"/>
+            <Button x:Name="btnSubtract" Content="-" Width="50" Height="30" 
+                    Margin="5" Click="BtnSubtract_Click"/>
+            <Button x:Name="btnMultiply" Content="X" Width="50" Height="30" 
+                    Margin="5" Click="BtnMultiply_Click"/>
+            <Button x:Name="btnDivide" Content="/" Width="50" Height="30" 
+                    Margin="5" Click="BtnDivide_Click"/>
+        </StackPanel>
+        <Label Grid.Row="3" Grid.Column="0" Content="Answer:" 
+               VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="txtAnswer" Grid.Row="3" Grid.Column="1" 
+                 Height="25" Margin="5" IsReadOnly="True" 
+                 VerticalContentAlignment="Center" Background="WhiteSmoke"/>
+    </Grid>
+</Window>
